@@ -18,6 +18,12 @@ namespace WebApplication2
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "DirectCreate",
+                url: "NewProduct",
+                defaults: new { controller = "Product", action = "Create", id = UrlParameter.Optional }
+            );
         }
     }
 }
